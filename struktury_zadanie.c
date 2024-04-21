@@ -47,7 +47,7 @@ int main()
 		if (wezel == NULL)
 		{
 			printf("Błąd alokacji pamięci.\n");
-			return (-1);
+			return (NULL);
 		}
 		wezel->fb = fb(i);
 		wezel->szereg = szereg(i);
