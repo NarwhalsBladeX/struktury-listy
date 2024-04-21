@@ -55,14 +55,14 @@ int main()
 
 		if (pierwszy == NULL)
 		{
-        	pierwszy = wezel;
-        	tymczasowy = pierwszy;
-        }
+        		pierwszy = wezel;
+        		tymczasowy = pierwszy;
+        	}
 		else
 		{
-        	tymczasowy->nastepny = wezel;
-        	tymczasowy = tymczasowy->nastepny;
-        }
+        		tymczasowy->nastepny = wezel;
+        		tymczasowy = tymczasowy->nastepny;
+        	}
 	}
 
 	printf("Elementy listy:\n");
@@ -80,35 +80,35 @@ int main()
 	{
 		if (index % 2 != 0)
 		{
-    		if (poprzedni == NULL)
+    			if (poprzedni == NULL)
 			{
-            	pierwszy = obecny->nastepny;
+            		pierwszy = obecny->nastepny;
         		free(obecny);
-            	obecny = pierwszy;
-            }
+            		obecny = pierwszy;
+            		}
 			else
 			{
-            	poprzedni->nastepny = obecny->nastepny;
-            	free(obecny);
-            	obecny = poprzedni->nastepny;
+            		poprzedni->nastepny = obecny->nastepny;
+            		free(obecny);
+            		obecny = poprzedni->nastepny;
+        		}
         	}
-        }
 		else
 		{
-            poprzedni = obecny;
-            obecny = obecny->nastepny;
-        }
+            		poprzedni = obecny;
+            		obecny = obecny->nastepny;
+        	}
 		index++;
 	}
 
 	printf("Elementy listy po usunięciu elementów o nieparzystych indeksach:\n");
-    tymczasowy = pierwszy;
-    while (tymczasowy != NULL)
+    	tymczasowy = pierwszy;
+    	while (tymczasowy != NULL)
 	{
-    	printf("Fibonacci: %d, Szereg: %d\n", tymczasowy->fb, tymczasowy->szereg);
-    	tymczasowy = tymczasowy->nastepny;
+		printf("Fibonacci: %d, Szereg: %d\n", tymczasowy->fb, tymczasowy->szereg);
+    		tymczasowy = tymczasowy->nastepny;
 	}
-
+	
 	while (pierwszy != NULL)
 	{
 		tymczasowy = pierwszy;
